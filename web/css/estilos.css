@@ -1,0 +1,264 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/09/2016, 13:35:40
+    Author     : Davis-W10
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#todosite{
+    /*background-color: yellow;*/
+    /*background-color: #fdf1cb;*/
+    /* cor cinza escuro #3E464F */
+    background-color: #eee;
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}
+
+#cabecalho{
+     /*background-color: blueviolet;*/
+     background-image: url(../imagens/cabecalho.png);
+     height: 100px;
+     border-bottom: solid 2px blueviolet;
+     margin-bottom: 10px;
+}
+
+#cabecalho header h1{
+    text-align: center;
+    font-size: 80px;
+    font-family: Arial;
+    font-weight: bold;
+    /*background-color: #fdf1cb;*/
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f,
+		 0px 14px 10px rgba(0,0,0,0.15),
+		 0px 24px 2px rgba(0,0,0,0.1),
+		 0px 34px 30px rgba(0,0,0,0.1);
+			 
+}
+
+ h1{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    /*background-color: #fdf1cb;*/
+    color: blueviolet;
+    text-shadow: 0px 3px 0px #b2a98f,
+		 0px 14px 10px rgba(0,0,0,0.15),
+		 0px 24px 2px rgba(0,0,0,0.1),
+		 0px 34px 30px rgba(0,0,0,0.1);
+			 
+}
+
+form h1{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    /*background-color: #fdf1cb;*/
+    color: blueviolet;
+    margin-top: -15px;
+    text-shadow: 0px 3px 0px #b2a98f,
+		 0px 14px 10px rgba(0,0,0,0.15),
+		 0px 24px 2px rgba(0,0,0,0.1),
+		 0px 34px 30px rgba(0,0,0,0.1);
+
+}
+
+
+#conteudo{
+/*    background-color: antiquewhite;*/
+    height: 450px;
+}
+
+#menus{
+/*    background-color: brown;*/
+    width: 150px;
+    float: left;
+    height: 100%;
+}
+
+#menus nav ol{
+    margin-left: 30px;
+    margin-top: 12px; 
+}
+
+#menus nav ol li{
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#menus nav ol li a{
+    text-decoration: none;
+    color: blueviolet;
+    
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    /*background-color: #fdf1cb;*/
+    color: blueviolet;
+    text-shadow: 0px 3px 0px #b2a98f,
+		 0px 5px 5px rgba(0,0,0,0.15),
+		 0px 5px 5px rgba(0,0,0,0.1),
+		 0px 5px 5px rgba(0,0,0,0.1);
+}
+
+#menus nav ol li a:hover{
+    background-color: yellow;
+    
+}
+
+#central{
+/*    background-color: aqua;*/
+    width: 1050px;
+    float: right;
+    height: 100%;
+}
+
+#central .imagem_capa img{
+    border:0;
+    margin:25px 250px;
+}
+
+
+#rodape{
+/*    background-color: chartreuse;*/
+    height: 50px;
+    border-top: solid 2px blueviolet;
+/*    margin-top: 1px;*/
+}
+
+#rodape h3{
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin-top: 1px;
+}
+#rodape h4{
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial;
+    color:#069;
+    text-decoration: none;
+    color: #000;
+}
+
+
+#login{
+/*    background-color: bisque;*/
+    margin: auto;
+    margin-top: 150px;
+    border:0;
+}
+
+table{
+    background-color: bisque;
+    margin: auto;
+    margin-top: 100px;
+    border:0;
+}
+
+
+.linhaEspecialTable{
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.linhaEspecialTable a{
+    color: #fff;
+}
+
+.linhaNovoRegistro{
+    font-size: 16px;
+    color: #069;
+    text-decoration: none;
+}
+
+.linhaNovoRegistro a{
+    font-size: 15px;
+    color: #069;
+    text-decoration: none;
+}
+
+
+table h2{
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: normal;
+/*    background-color: #fdf1cb;*/
+    color: #000;
+}
+
+form{
+    background-color: bisque;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+    width: 400px;
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+}
+
+.frmAlteraUsuario{
+    width: 400px;
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+}
+
+.frmNovoUsuario{
+    width: 400px;
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+}
+
+.frmUsuario{
+    width: 400px;
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+}
+
+
+.frmLogin{
+    width: 280px;
+}
+
+.frmLogin .table_login{
+    background-color: bisque;
+    margin: auto;
+    border:0;
+}
+
+
+label{
+    font-family: Arial;
+    font-size: 16px;
+    text-shadow: 2px 2px 2px blueviolet;
+}
+
+input{
+    font-family: Arial;
+    font-size: 16px;
+}
+
+form #foto{
+    clear:right;
+    
+}
+

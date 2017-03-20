@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+
+
+<style type="text/css">
+.formulario {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	clear: both;
+	float: left;
+	height: auto;
+	width: 90%;
+	margin:0 auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="formulario">
+
+<form id="form1" name="form1" method="post" class="formulario" action="">
+
+  <div style="float:left; width:70%;">
+  <label for="clinome">Nome..:</label>
+  <input type="hidden" name="clicodigo"  id="clicodigo" value=""/>
+  <input type="text" name="clinome"  id="clinome" required size="30" maxlength="30" value=""/>
+                    
+  <label for="logcodigo">Endereço..:</label>
+  <input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" value=""/> 
+  <select name="selectLogradouro" id="selectLogradouro">
+                    	
+  </select>                               
+                    
+  <label for="baicodigo">Bairro..:</label>
+  <input type="text" name="baicodigo"  id="baicodigo" size="1" maxlength="4"  value=""/>  
+  <select name="selectBairro" id="selectBairro">
+                    	
+  </select> 
+  <br><br> 
+                                 
+  <label for="cidcodigo">Cidade..:</label>
+  <input type="text" name="cidcodigo"  id="cidcodigo" size="1" maxlength="4"  value=""/>
+  <select name="selectCidade" id="selectCidade" >
+                    	
+  </select>
+    
+  <label for="clinumero">Número..:</label>
+  <input type="text" name="clinumero"  id="clinumero" size="10" maxlength="10"  value=""/>
+                    
+  <label for="clicomplemento">Complemento..:</label>
+  <input type="text" name="clicomplemento"  id="clicomplemento" size="10" maxlength="10"  value=""/>
+                    
+  <label for="clicep">Cep..:</label>
+  <input type="text" name="clicep"  id="clicep" size="10" maxlength="10"  value=""/>
+  <br><br>
+                    
+  <label for="clirg">RG..:</label>
+  <input type="text" name="clirg"  id="clirg" size="20" maxlength="20"  value=""/>
+                    
+  <label for="clicpf">CPF..:</label>
+  <input type="text" name="clicpf" onkeypress="" id="clicpf"  size="14" maxlength="14" value=""/>
+
+  <label for="clidatanasc">Data Nascimento..:</label>
+  <input type="date" onkeypress="" name="clidatanasc"    id="clidatanasc" size="10" maxlength="10" value=""/>
+  <br><br>
+                    
+  <label for="clidatacadastro">Data Cadastro..:</label>
+  <input type="date" onkeypress="" name="clidatacadastro" id="clidatacadastro"  size="10" maxlength="10" value=""/>
+                    
+  <label for="clifonecel">Fone Celular.:</label>
+  <input type="text" name="clifonecel"  id="clifonecel" size="16" maxlength="16" value=""/>
+                    
+  <label for="clifone2">Fone outro..:</label>
+  <input type="text" name="clifone2"  id="clifone2"  size="16" maxlength="16" value=""/>
+  <label for="cliemail">Email.:</label>
+  <input type="text" name="cliemail"  id="cliemail" size="50" maxlength="50" value=""/>
+</div>
+<div style="float:right; width:30%;">
+  <img  alt="Foto" width="100" height="100" name="mostraFoto" id="mostraFoto" src="imagens/${param.clifoto }"/>
+</div>
+                    
+  <label for="clifoto">Foto..:</label>
+  <input type="text" name="clifoto"  id="clifoto"  size="40" maxlength="40" value=""/>
+  <input type="file" name="pegaFoto"  id="pegaFoto"  />
+  <br><br>
+                    
+  <label>Sexo..:  Maculino
+  	<input type="radio" name="clisexo"  id="clisexo" value="M" />
+  </label>
+  <label>Feminino
+    <input type="radio" name="clisexo"  id="clisexo" value="F" /><br><br> 
+  </label>
+  <label for="cliobs">Obs..:</label>
+  <input type="text" name="cliobs"  id="cliobs"  size="100" maxlength="100" value=""/><br><br>
+  <input type="submit" name="acao" value="alterar"/>
+</form>
+
+</div>
+
+</body>
+</html>
