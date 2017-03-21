@@ -22,7 +22,13 @@
             <input type="text" name="clinome"  id="clinome" required size="30" maxlength="30"/>
 
             <label for="logcodigo">Endereço..:</label>
-            <input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" />                                
+            <!--<input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" />-->                                
+            <input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" value="${param.logcodigo}" disabled="disabled"/> 
+            <select name="selectLogradouro" id="selectLogradouro">
+                <tagsTCC:listaLogradouroSelect/>
+            </select> 
+            
+            
             <label for="baicodigo">Bairro..:</label>
             <input type="text" name="baicodigo"  id="baicodigo" size="1" maxlength="4" /> 
             <br><br>             
@@ -80,8 +86,8 @@
             <label for="cliobs">Obs..:</label>
             <input type="text" name="cliobs"  id="cliobs"  size="100" maxlength="100"/><br><br>
             <input type="submit" name="acao" value="novo"/>
-
-
+            
+        </form>    
             
 
 
@@ -167,7 +173,7 @@
 
             <div id="formulario">
 
-                <form id="form1" name="form1" method="post" action="Cliente">
+                <form id="formCliente" name="formCliente" method="post" action="Cliente">
 
                     <div style="float:left; width:70%;">
                         <label for="clinome">Nome..:</label>
@@ -210,12 +216,13 @@
                         <br />
 
                         <label for="clidatanasc">Data Nascimento..:</label>
-                        <!--<input type="date" onkeypress="formata_mascara(this, '##/##/####'); return Numero(event);" name="clidatanasc"    id="clidatanasc" size="10" maxlength="10" value="${param.clidatanasc}"/>-->
+                        <!--<input type="date" onkeypress="formata_mascara(this, '##-##-####'); return Numero(event);" name="clidatanasc"    id="clidatanasc" size="10" maxlength="10" value="${param.clidatanasc}"/>-->
                         <input type="text" name="clidatanasc" id="clidatanasc" size="10" maxlength="10" value="${param.clidatanasc}"/>
+                        
                         <br><br>
 
                         <label for="clidatacadastro">Data Cadastro..:</label>
-                        <!--<input type="date" onkeypress="formata_mascara(this, '##/##/####'); return Numero(event);" name="clidatacadastro" id="clidatacadastro"  size="10" maxlength="10" value="${param.clidatacadastro}"/>-->
+                        <!--<input type="date" onkeypress="formata_mascara(this, '##-##-####'); return Numero(event);" name="clidatacadastro" id="clidatacadastro"  size="10" maxlength="10" value="${param.clidatacadastro}"/>-->
                         <input type="text" name="clidatacadastro" id="clidatacadastro"  size="10" maxlength="10" value="${param.clidatacadastro}"/>
 
                         <label for="clifonecel">Fone Celular.:</label>
@@ -262,5 +269,5 @@
 
         </c:otherwise>
     </c:choose>
-</form>
+<!--</form>-->
 <c:import url="rodape.jsp"/>
