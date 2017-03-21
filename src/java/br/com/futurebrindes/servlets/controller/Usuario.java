@@ -38,6 +38,9 @@ public class Usuario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
+        
+        response.setContentType("text/html;charset=UTF-8");
+        
         RequestDispatcher rd = null;
         String usuario = request.getParameter("usuario");
         String senha = request.getParameter("senha");

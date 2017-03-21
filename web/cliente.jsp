@@ -1,6 +1,9 @@
 <%-- 
     Videoaulas Neri www.informaticon.com.br   email:videoaulaneri@gmail.com
 --%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <%@page import="java.text.SimpleDateFormat"%>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tagsTCC" %>
 <tagsTCC:verificaSessao/>
@@ -8,6 +11,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <c:import url="cabecalho.jsp"/>
+
 
 <form id="formCliente" class="formulario" method="get" action="Cliente">
     <c:choose>
@@ -17,7 +21,7 @@
             <label for="clinome">Nome..:</label>
             <input type="text" name="clinome"  id="clinome" required size="30" maxlength="30"/>
 
-            <label for="logcodigo">Endereço..:</label>
+            <label for="logcodigo">EndereÃ§o..:</label>
             <input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" />                                
             <label for="baicodigo">Bairro..:</label>
             <input type="text" name="baicodigo"  id="baicodigo" size="1" maxlength="4" /> 
@@ -25,7 +29,7 @@
             <label for="cidcodigo">Cidade..:</label>
             <input type="text" name="cidcodigo"  id="cidcodigo" size="1" maxlength="4" />
 
-            <label for="clinumero">Número..:</label>
+            <label for="clinumero">NÃºmero..:</label>
             <input type="text" name="clinumero"  id="clinumero" size="10" maxlength="10"/>
 
             <label for="clicomplemento">Complemento..:</label>
@@ -83,7 +87,7 @@
 
         </c:when>
         <c:otherwise>
-            <h1>Alteração de Cliente</h1>
+            <h1>AlteraÃ§Ã£o de Cliente</h1>
             <br />
 
             <!--            <br>                     
@@ -91,7 +95,7 @@
                         <input type="hidden" name="clicodigo"  id="clicodigo" value="${param.clicodigo}"/>
                         <input type="text" name="clinome"  id="clinome" required size="30" maxlength="30" value="${param.clinome}"/>
             
-                        <label for="logcodigo">Endereço..:</label>
+                        <label for="logcodigo">EndereÃ§o..:</label>
                         <input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" value="${param.logcodigo}"/> 
                         <select name="selectLogradouro" id="selectLogradouro">
             <tagsTCC:listaLogradouroSelect/>
@@ -110,7 +114,7 @@
             <tagsTCC:listaCidadeSelect/>
         </select>
 
-        <label for="clinumero">Número..:</label>
+        <label for="clinumero">NÃºmero..:</label>
         <input type="text" name="clinumero"  id="clinumero" size="10" maxlength="10"  value="${param.clinumero}"/>
 
         <label for="clicomplemento">Complemento..:</label>
@@ -170,7 +174,7 @@
                         <input type="hidden" name="clicodigo"  id="clicodigo" value="${param.clicodigo}"/>
                         <input type="text" name="clinome"  id="clinome" required size="30" maxlength="30" value="${param.clinome}"/>
                     
-                        <label for="logcodigo">Endereço..:</label>
+                        <label for="logcodigo">EndereÃ§o..:</label>
                         <input type="text" name="logcodigo"  id="logcodigo" size="1" maxlength="4" value="${param.logcodigo}"/> 
 <!--                        <select name="selectLogradouro" id="selectLogradouro">
                             <tagsTCC:listaLogradouroSelect/>
@@ -190,7 +194,7 @@
                         </select>-->
                         <br />
 
-                        <label for="clinumero">Número..:</label>
+                        <label for="clinumero">NÃºmero..:</label>
                         <input type="text" name="clinumero"  id="clinumero" size="10" maxlength="10"  value="${param.clinumero}"/>
 
                         <label for="clicomplemento">Complemento..:</label>

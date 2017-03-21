@@ -1,6 +1,9 @@
 <%-- 
     Videoaulas Neri www.informaticon.com.br   email:videoaulaneri@gmail.com
 --%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <%@taglib tagdir="/WEB-INF/tags" prefix="tagsTCC" %>
 <tagsTCC:verificaSessao/>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tagsTCC" %>
@@ -12,19 +15,19 @@
         <c:when test="${param.acao eq 'novo'}">
                 <h1>Novo Bairro</h1><br>                    
                 <div class="campos">
-                    <label for="baidescricao">Descrição..:</label>
+                    <label for="baidescricao">DescriÃ§Ã£o..:</label>
                     <input type="text" name="baidescricao"  id="baidescricao" required="true" size="30" maxlength="30"/>
                 </div><br>
                 <input type="submit" name="acao" value="novo"/>
             </c:when>
             <c:otherwise>
-                <h1>Alteração de Bairro</h1><br>
+                <h1>AlteraÃ§Ã£o de Bairro</h1><br>
                  <div class="campos">
-                    <label for="baicodigo">Código..:</label>
+                    <label for="baicodigo">CÃ³digo..:</label>
                     <input type="text" value="${param.baicodigo}" name="baicodigo"  id="baicodigo" required="true" size="5" readonly="true"/>
                 </div><br>
                     <div class="campos">
-                    <label for="baidescricao">Descrição..:</label>
+                    <label for="baidescricao">DescriÃ§Ã£o..:</label>
                     <input type="text" value="${param.baidescricao}" name="baidescricao"  id="baidescricao" required="true" size="30" maxlength="30"/>
                 </div><br>
                 <input type="submit" name="acao" value="alterar"/>

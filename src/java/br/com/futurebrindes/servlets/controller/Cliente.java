@@ -37,8 +37,10 @@ public class Cliente extends HttpServlet {
         RequestDispatcher rd = null;
         
         
-        System.out.println("request.getParameter(clidatanasc) = " + request.getParameter("clidatanasc"));
-        System.out.println("request.getParameter(clidatacadastro) = " + request.getParameter("clidatacadastro"));
+        //System.out.println("request.getParameter(clidatanasc) = " + request.getParameter("clidatanasc"));
+        //System.out.println("request.getParameter(clidatacadastro) = " + request.getParameter("clidatacadastro"));
+        
+        response.setContentType("text/html;charset=UTF-8");
         
         String cliCodigo= request.getParameter("clicodigo");
         String cliNome= request.getParameter("clinome");

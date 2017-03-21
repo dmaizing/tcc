@@ -163,6 +163,14 @@ form h1{
     border:0;
 }
 
+#inicial{
+    margin-top: 25px;
+    margin:25px 250px;
+    
+}
+
+
+
 table{
     background-color: bisque;
     margin: auto;

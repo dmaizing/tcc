@@ -1,5 +1,8 @@
 <%@tag body-content="empty" import="java.util.*, java.text.*" %>
 <%
+    
+    request.setCharacterEncoding("UTF8");
+    
     int limite = 10;
     String numPagina = request.getParameter("numpagina");
     if (numPagina == null) {

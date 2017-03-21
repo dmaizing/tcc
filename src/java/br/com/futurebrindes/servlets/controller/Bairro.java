@@ -36,6 +36,9 @@ public class Bairro extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
+        
+        response.setContentType("text/html;charset=UTF-8");
+        
         RequestDispatcher rd = null;
         String baiCodigo = request.getParameter("baicodigo");
         String baiDescricao = request.getParameter("baidescricao");

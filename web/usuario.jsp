@@ -1,6 +1,9 @@
 <%-- 
     Videoaulas Neri www.informaticon.com.br   email:videoaulaneri@gmail.com
 --%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <%@taglib tagdir="/WEB-INF/tags" prefix="tagsTCC" %>
 <tagsTCC:verificaSessao/>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tagsTCC" %>
@@ -10,9 +13,9 @@
 <form id="formUsuario" method="get" action="Usuario" class="frmUsuario">
     <c:choose>
         <c:when test="${param.acao eq 'novo'}">
-            <h1>Novo Usuário</h1><br>                    
+            <h1>Novo UsuÃ¡rio</h1><br>                    
             <div class="campos">
-                <label for="usuario">Usuário.:</label>
+                <label for="usuario">UsuÃ¡rio.:</label>
                 <input type="text"  name="usuario" required="true" size="10" maxlength="10"/>
             </div><br>
             <div class="campos">
@@ -25,7 +28,7 @@
             </div><br>
             <div class="campos">
                 <label for="Nivel">Nivel.:</label>
-                <input type="number" min="1" max="3" name="nivel"  required="true" size="1" maxlength="1"/> 1-básico, 2-intermediário,3-administrador
+                <input type="number" min="1" max="3" name="nivel"  required="true" size="1" maxlength="1"/> 1-bÃ¡sico, 2-intermediÃ¡rio,3-administrador
             </div><br>
             <div class="campos">
                 <label for="nomecompleto">Nome Completo.:</label>
@@ -34,11 +37,11 @@
             <input type="submit" name="acao" value="novo"/>
         </c:when>
         <c:otherwise>
-            <h1>Alteração de usuarios</h1><br>
+            <h1>AlteraÃ§Ã£o de usuarios</h1><br>
 
 
             <div class="campos">
-                <label for="usuario">Usuário.:</label>
+                <label for="usuario">UsuÃ¡rio.:</label>
                 <input type="text" name="usuario" value="${param.usuario}" readonly="true" size="10"/>
             </div><br>
             <div class="campos">
@@ -52,7 +55,7 @@
             </div><br>
             <div class="campos">
                 <label for="Nivel">Nivel.:</label>
-                <input type="number" min="1" max="3" name="nivel" value="${param.nivel}" required="true" size="1" maxlength="1"/> 1-básico, 2-intermediário,3-administrador
+                <input type="number" min="1" max="3" name="nivel" value="${param.nivel}" required="true" size="1" maxlength="1"/> 1-bÃ¡sico, 2-intermediÃ¡rio,3-administrador
             </div><br>
             <div class="campos">
                 <label for="nomecompleto">Nome Completo.:</label>

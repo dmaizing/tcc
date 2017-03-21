@@ -34,6 +34,3 @@
                     </nav>
                 </div>
                 <div id="central">
-                    <div class="imagem_capa">
-                        <img src="imagens\img-brindes.png" alt="" width="480" height="340" />
-                    </div>
