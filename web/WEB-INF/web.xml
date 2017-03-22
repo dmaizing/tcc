@@ -48,6 +48,14 @@
         <servlet-name>Cliente</servlet-name>
         <url-pattern>/Cliente</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Logradouro</servlet-name>
+        <servlet-class>br.com.futurebrindes.servlets.controller.Logradouro</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logradouro</servlet-name>
+        <url-pattern>/Logradouro</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

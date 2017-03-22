@@ -101,7 +101,7 @@ public List getListaClientePaginada(int pagina, String ordenacao, String pesquis
         }
         return listaCliente;
     } catch (SQLException ex) {
-        Logger.getLogger(BairroDao.class.getName()).log(Level.SEVERE, null, ex);
+        Logger.getLogger(ClienteDao.class.getName()).log(Level.SEVERE, null, ex);
     } finally {
         //connection.close();
         //ps.close();

@@ -11,6 +11,7 @@
 
 
     List listaDeClientes = (List) request.getAttribute("sessaoListaClientePaginada");
+    
     String ordenacao = request.getParameter("ordenacao");
     if (ordenacao == null)
         ordenacao = "clinome";

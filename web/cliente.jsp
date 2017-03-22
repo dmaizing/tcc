@@ -1,6 +1,3 @@
-<%-- 
-    Videoaulas Neri www.informaticon.com.br   email:videoaulaneri@gmail.com
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -31,6 +28,9 @@
             
             <label for="baicodigo">Bairro..:</label>
             <input type="text" name="baicodigo"  id="baicodigo" size="1" maxlength="4" /> 
+            <select name="selectBairro" id="selectBairro">
+                <tagsTCC:listaBairroSelect/>
+            </select> 
             <br><br>             
             <label for="cidcodigo">Cidade..:</label>
             <input type="text" name="cidcodigo"  id="cidcodigo" size="1" maxlength="4" />

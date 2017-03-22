@@ -20,7 +20,8 @@
                         <h1>MENUS</h1>
                         <ol>
                             <li><a href="Bairro?campoapesquisar=baiDescricao&acao=listarBairro&ordenacao=baiDescricao&numpagina=1">Bairro</a></li> 
-                            <li><a href="endereco.jsp">Endereço</a></li>
+                            <!--<li><a href="logradouro.jsp">Endereço</a></li>-->
+                            <li><a href="Logradouro?campoapesquisar=logdescricao&acao=listarLogradouro&ordenacao=logdescricao&numpagina=1">Logradouro</a></li> 
                             <li><a href="cidade.jsp">Cidade</a></li>
                             <li><a href="Cliente?campoapesquisar=clinome&acao=listarCliente&ordenacao=clinome&numpagina=1">Cliente</a></li>
                             <li><a href="estoque.jsp">Estoque</a></li>
