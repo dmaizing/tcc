@@ -1,14 +1,14 @@
 /*
- * Prof Neri Neitzke - Mais de 100 palestras em 7 países
- * Videoaulas Neri wwww.informaticon.com.br
- * email: videoaulaneri@gmail.com
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-
 package br.com.futurebrindes.servlets.controller;
 
-import br.com.futurebrindes.dao.BairroDao;
-import br.com.futurebrindes.javabean.model.BairroModel;
+import br.com.futurebrindes.dao.CidadeDao;
+import br.com.futurebrindes.javabean.model.CidadeModel;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -21,9 +21,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author User
+ * @author davis_9n3g2
  */
-public class Bairro extends HttpServlet {
+public class Cidade extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,65 +36,68 @@ public class Bairro extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-        
         response.setContentType("text/html;charset=UTF-8");
-        
+
         RequestDispatcher rd = null;
-        String baiCodigo = request.getParameter("baicodigo");
-        String baiDescricao = request.getParameter("baidescricao");
-        BairroModel bairro = new BairroModel();
-        if (baiCodigo != null)
-            bairro.setBaiCodigo(Integer.parseInt(baiCodigo));
-        bairro.setBaiDescricao(baiDescricao);
-       
-        BairroDao bairroDao = new BairroDao();
-       
+        String cidCodigo = request.getParameter("cidcodigo");
+        String cidDescricao = request.getParameter("ciddescricao");
+        CidadeModel cidade = new CidadeModel();
+        if (cidCodigo != null) {
+            cidade.setCidCodigo(Integer.parseInt(cidCodigo));
+        }
+
+        cidade.setCidDescricao(cidDescricao);
+
+        CidadeDao cidadeDao = new CidadeDao();
+
         //verificar qual é a acao
         String acao = request.getParameter("acao");
         if (acao == null) {
-            acao = "listarBairro";
+            acao = "listarCidade";
         }
 
         if (acao.equals("alterar")) {
-            bairroDao.alteraBairro(bairro);
-            rd = request.getRequestDispatcher("/Bairro?acao=listarBairro");
+            cidadeDao.alteraCidade(cidade);
+            rd = request.getRequestDispatcher("/Cidade?acao=listarCidade");
         } else if (acao.equals("excluir")) {
-            bairroDao.excluiBairro(bairro);
-            rd = request.getRequestDispatcher("/Bairro?acao=listarBairro");
-        } else if (acao.equals("listarBairro")) {
+            cidadeDao.excluiCidade(cidade);
+            rd = request.getRequestDispatcher("/Cidade?acao=listarCidade");
+        } else if (acao.equals("listarCidade")) {
             int numPagina = 1;
             if (request.getParameter("numpagina") != null) {
                 numPagina = Integer.parseInt(request.getParameter("numpagina"));
             }
             try {
                 String ordenacao = request.getParameter("ordenacao");
-                if (ordenacao == null)
-                    ordenacao = "baiDescricao";
-                
+                if (ordenacao == null) {
+                    ordenacao = "ciddescricao";
+                }
+
                 String pesquisa = request.getParameter("pesquisa");
-                if (pesquisa == null)
+                if (pesquisa == null) {
                     pesquisa = "";
-                
+                }
+
                 String campoapesquisar = request.getParameter("campoapesquisar");
-                if (campoapesquisar == null)
-                    campoapesquisar = "baiDescricao";
-      
-                List listaBairros = bairroDao.getListaBairroPaginada(numPagina, ordenacao, pesquisa, campoapesquisar);
-                String qtdTotalRegistros = bairroDao.totalRegistros(pesquisa, campoapesquisar);
-                request.setAttribute("sessaoListaBairroPaginada", listaBairros);
+                if (campoapesquisar == null) {
+                    campoapesquisar = "ciddescricao";
+                }
+
+                List listaCidades = cidadeDao.getListaCidadePaginada(numPagina, ordenacao, pesquisa, campoapesquisar);
+                String qtdTotalRegistros = cidadeDao.totalRegistros(pesquisa, campoapesquisar);
+                request.setAttribute("sessaoListaCidadePaginada", listaCidades);
                 request.setAttribute("sessaoqtdTotalRegistros", qtdTotalRegistros);
-                rd = request.getRequestDispatcher("/listabairros.jsp");
+                rd = request.getRequestDispatcher("/listacidades.jsp");
             } catch (SQLException ex) {
-                Logger.getLogger(Bairro.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Cidade.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (acao.equals("novo")) {
-            bairroDao.novoBairro(bairro);
-            rd = request.getRequestDispatcher("/Bairro?acao=listarBairro");
-        } 
+            cidadeDao.novaCidade(cidade);
+            rd = request.getRequestDispatcher("/Cidade?acao=listarCidade");
+        }
 
         rd.forward(request, response);
 
-    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -112,7 +115,7 @@ public class Bairro extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Bairro.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Cidade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -130,7 +133,7 @@ public class Bairro extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Bairro.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Cidade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

@@ -294,26 +294,3 @@ form #foto{
     
 }
 
-#foto {
-    height: 100px;
-    border-bottom: solid blueviolet 1px;
-    width: 100px;
-    float: right;
-	
-}
-.formVenda {
-	margin-top: 10px; 
-	border: solid blueviolet 2px;
-        width: 90%;
-}
-.formItensVenda {
-	margin-top: 1px;
-	border: solid blueviolet 2px;
-        width: 90%;
-}
-.tabelaItensVenda {
-    font-family: Arial;
-    font-size: 16px;
-    text-shadow: 2px 2px 2px blueviolet;
-    font-weight: bold;
-}

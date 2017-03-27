@@ -1,5 +1,5 @@
 <%@tag body-content="empty" %>
-<<jsp:useBean id="beanLogradouro" class="br.com.futurebrindes.dao.LogradouroDao"></jsp:useBean>
+<jsp:useBean id="beanLogradouro" class="br.com.futurebrindes.dao.LogradouroDao"></jsp:useBean>
 <%
 	String selected="";
     java.util.List listaDeLogradouro = (java.util.List) beanLogradouro.getListaLogradouroCombo();

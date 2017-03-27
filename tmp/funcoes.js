@@ -89,17 +89,6 @@ function atualizaCodigoCidadeForn() {
     document.forms['formFornecedor']['cid_codigo'].value = getCidCodigo;
 }
 
-function atualizaCodigoCategoriaProd() {
-    var getCatCodigo = document.forms['formProduto']['selectCategoria'].value;
-    document.forms['formProduto']['catcodigo'].value = getCatCodigo;
-}
-
-function atualizaCodigoFornecedorProd() {
-    var getFornCodigo = document.forms['formProduto']['selectFornecedor'].value;
-    document.forms['formProduto']['for_codigo'].value = getFornCodigo;
-}
-
-
 window.onload = function () {
     document.forms['formCliente']['clifoto'].oninput = atualizarFoto;
     document.forms['formCliente']['pegaFoto'].onblur = fileFoto;
@@ -110,7 +99,6 @@ window.onload = function () {
     document.forms['formFornecedor']['selectLogradouroForn'].onclick = atualizaCodigoLogradouroForn;
     document.forms['formFornecedor']['selectCidade'].onclick = atualizaCodigoCidadeForn;
 
-    document.forms['formCategoria']['selectCategoria'].onclick = atualizaCodigoCategoria;
 };
 
 

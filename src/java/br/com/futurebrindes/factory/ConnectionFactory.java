@@ -13,7 +13,8 @@ public class ConnectionFactory {
         */
     
         String driver = "com.mysql.jdbc.Driver";
-        private String url = "jdbc:mysql://localhost:3306/futurebrindes";
+        private String url = "jdbc:mysql://localhost:3306/futurebrindes?zeroDateTimeBehavior=convertToNull";
+        //private String url = "jdbc:mysql://localhost:3306/futurebrindes";
         private String usuario = "root";
 	private String senha   = ""; 
         

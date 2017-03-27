@@ -1,5 +1,5 @@
 <%@tag body-content="empty" %>
-<<jsp:useBean id="beanCidade" class="br.com.futurebrindes.dao.CidadeDao"></jsp:useBean>
+<jsp:useBean id="beanCidade" class="br.com.futurebrindes.dao.CidadeDao"></jsp:useBean>
 <%
     String selected="";
     java.util.List listaDeCidade = (java.util.List) beanCidade.getListaCidadeCombo();
